@@ -13,18 +13,7 @@ class ExtensionsAdminPage {
   init() {
     var almContext = Rally.environment.getContext();
     
-    this.appContext = Ext.create('Rally.app.Context', {
-      initialValues: {
-        user: almContext.getUser(),
-        subscription: almContext.getSubscription(),
-        featureToggles: Rally.alm.FeatureToggle,
-        permissions: almContext.getPermissions(),
-        workspace: almContext.getWorkspace(),
-        project: almContext.getProject(),
-        projectScopeUp: almContext.getProjectScopeUp(),
-        projectScopeDown: almContext.getProjectScopeDown()
-      }
-    });
+    
   }
 
   render(el) {
@@ -43,8 +32,7 @@ class ExtensionsAdminPage {
 
   _createPageComponent() {
     return Page({
-      navState: this.navState,
-      appContext: this.appContext,
+      navState: this.navState
     });
   }
 
