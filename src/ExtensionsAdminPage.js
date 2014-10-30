@@ -2,7 +2,7 @@ var _ = require('lodash');
 var React = require('react');
 
 
-var Page = require('./components/Page.react');
+var Page = require('../components/Page.react');
 
 class ExtensionsAdminPage {
 
