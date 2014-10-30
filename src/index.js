@@ -1,4 +1,4 @@
-var ExtensionsAdminPage = require('promise?global!ExtensionsAdminPage');
+var ExtensionsAdminPage = require('promise?global!./ExtensionsAdminPage');
 
 module.exports = {
   matches(slug, context) {
