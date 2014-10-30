@@ -1,7 +1,7 @@
 var _ = require('lodash');
 var React = require('react');
 
-
+var AlmUtils = require('alm-utils');
 var Page = require('../components/Page.react');
 
 class ExtensionsAdminPage {
