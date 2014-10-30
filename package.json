@@ -1,0 +1,54 @@
+{
+  "name": "alm-page-extensions-admin",
+  "version": "0.0.0",
+  "description": "Extensions Admin Page",
+  "author": "Rally Software",
+  "scripts": {
+    "debug": "node --harmony --debug-brk node_modules/jest-cli/bin/jest.js --runInBand",
+    "prepublish": "grunt",
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/test_utils/preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/alm-test-utils",
+      "<rootDir>/node_modules/alm-utils",
+      "<rootDir>/?.*/node_modules/traceur/bin/traceur-runtime",
+      "<rootDir>/?.*/node_modules/lodash",
+      "<rootDir>/?.*/node_modules/react",
+      "<rootDir>/?.*/node_modules/flux"
+    ],
+    "globals": {
+      "Rally": {
+        "clientmetrics": {}
+      }
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/test_utils/setupTestFramework.js",
+    "reportTestsIndividually": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ggamble-rally/alm-page-extensions-admin.git"
+  },
+  "main": "src/index.js",
+  "private": true,
+  "dependencies": {
+    "alm-utils": "git+https://665d9e38d5734def0b358759e41db74a4256c626:x-oauth-basic@github.com/RallySoftware/alm-utils.git#275835c2e1f50392c9cfefb56f71504bb73fae89",
+    "lodash": "^2.4.1",
+    "moment": "^2.8.3",
+    "rallymetrics": "^0.4.3",
+    "react": "^0.11.2"
+  },
+  "devDependencies": {
+    "alm-test-utils": "git+https://665d9e38d5734def0b358759e41db74a4256c626:x-oauth-basic@github.com/RallySoftware/alm-test-utils.git#6c9e5687a0f771cbb7b8227b836de069d58b9b83",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-jsxhint": "^0.3.0",
+    "jest-cli": "git://github.com/dougdiehnelt/jest.git#reportTestsIndividually",
+    "jstransform": "^6.1.0",
+    "react-tools": "^0.11.2",
+    "traceur": "0.0.60",
+    "xmldom": "^0.1.19"
+  }
+}
